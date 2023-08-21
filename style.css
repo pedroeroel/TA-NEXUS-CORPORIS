@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para a box de cadastro */
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 300px;
+}
+
+.box h2 {
+    color: #333;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+header {
+    background-color: #04060a;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 2px solid rgb(175, 175, 175);   
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.651);
+    transition: color 0.95s;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+/* Estilos para as seções */
+section {
+    padding: 2em;
+
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}

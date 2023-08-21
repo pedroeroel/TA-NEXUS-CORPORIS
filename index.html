@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hey Services - Terceirização para Educadores</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Hey Services</h1> <img href="https://i.pinimg.com/originals/22/04/83/22048318945e5ceb064262a4389a5563.jpg" />
+
+        <nav>
+
+            <ul>
+
+                <li><a href="sobre.html">Sobre</a></li>
+
+                <li><a href="servicos.html">Serviços</a></li>
+
+                <li><a href="contato.html">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section id="sobre">
+
+        <h2>Sobre Nós</h2>
+
+        <p>A Hey Services é uma empresa especializada em terceirização de educadores qualificados para instituições educacionais de todos os níveis.</p>
+
+    </section>
+
+    <section id="servicos">
+
+        <h2>Nossos Serviços</h2>
+
+        <ul>
+
+            <li>Contratação de Professores</li>
+
+            <li>Formação de Professores</li>
+
+            <li>Assessoria Pedagógica</li>
+
+            <li>Workshop-ps Educacionais</li>
+
+        </ul>
+
+        <div class="container">
+            <div class="box">
+                <h2>Cadastre-se</h2>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                
+                    <button type="button" onclick="salvarCadastro()">Cadastrar</button>
+                </form>
+                
+                <script src="database.py"></script>
+                <script>
+                    function salvarCadastro() {
+                        var nome = document.getElementById('nome').value;
+                        var email = document.getElementById('email').value;
+                        var senha = document.getElementById('senha').value;  // Não é a prática mais segura. Considere criptografar as senhas em um aplicativo real.
+                        var telefone = document.getElementById('telefone').value;
+                
+                        inserirCadastro(nome, email, senha, telefone);
+                
+                        // Limpar campos após inserção
+                        document.getElementById('nome').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('senha').value = '';
+                        document.getElementById('telefone').value = '';
+                    }
+                </script>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="contato">
+
+        <h2>Contato</h2>
+
+        <p>Entre em contato conosco para obter mais informações:</p>
+
+        <address>
+            Email: <a href="mailto:contato@heyservices.com">contato@heyservices.com</a><br>
+            Telefone: (XX) XXXX-XXXX
+        </address>
+
+    </section>
+
+    <footer>
+
+        <p>&copy; 2023 Hey Services. Todos os direitos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
