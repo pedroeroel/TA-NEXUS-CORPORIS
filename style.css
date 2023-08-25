@@ -3,57 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-}
-
-.container {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Estilos para a box de cadastro */
-.box {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    width: 300px;
-}
-
-.box h2 {
-    color: #333;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-form input {
-    width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1em;
-}
-
-form button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #2980b9;
+    background-image: url(img/entrevista.jpg);
 }
 
 header {
@@ -94,6 +44,31 @@ nav ul li a:hover {
     transition: 0.25s;
 }
 
+#sobre {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    justify-content:first baseline;
+    background-color: #fff;
+    margin: 5em;
+    border-left: 10px solid rgb(175, 175, 175);
+}
+
+#sobre h2 {
+    color: #333;
+}
+
+#servicos {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    justify-content:first baseline;
+    background-color: #fff;
+    margin: 5em;
+    border-left: 10px solid rgb(175, 175, 175);
+}
+
+#servicos h2 {
+    color: #333;
+}
 /* Estilos para as seções */
 section {
     padding: 2em;
@@ -101,8 +76,14 @@ section {
 }
 
 section h2 {
-    color: #333;
+    color: #fff;
     margin-bottom: 1em;
+}
+
+#contato {
+    text-align: left;
+    margin: 5px;
+    margin-bottom: 0;
 }
 
 /* Estilos para o rodapé */
@@ -110,5 +91,6 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1em 0;
+    justify-content: space-between;
+    padding: 1em 0 ;
 }
