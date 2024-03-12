@@ -1,127 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* VÍDEO DE FUNDO E FUNDO COM GRADIENTE */
+#vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+#backgradiente {
+    position: fixed;
+    background: rgb(0,0,0,0.55);
+    min-width: 100%;
+    min-height: 100%;
+    color: white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* BODY CONFIGS */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    background-image: url(img/entrevista.jpg);
 }
+
+/* SCROLLBAR */
+
+main {
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
+    margin: 90px 0;
+    transition: scrollbar-color 2s;
+}
+
+main::-webkit-scrollbar{
+    background-color: transparent;
+    position: fixed;
+    transition: 2.5s;
+    width: 5px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transition: 2.5s;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+main::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 5px;
+}
+
+/* DIVISÕES SURGINDO A PARTIR DO MEIO */
+
+.title-container {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#surgirhr {
+    animation: surgirdomeio 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    width: 0;
+    border: none;
+    border-top: 1px solid white;
+    margin: 0 auto;
+}
+
+@keyframes surgirdomeio {
+    0% {
+        width: 0;
+        margin: 0 auto;
+    }
+    100% {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* HEADER */
 
 header {
-    background-color: #04060a;
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    border-bottom: 2px solid rgb(175, 175, 175);   
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin: 15px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-
-nav ul li a {
-    mix-blend-mode: exclusion;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.95s;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    color: rgb(223, 244, 255);
-    transition: 0.25s;
-    background-color:#333;
-}
-
-#sobre {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    justify-content:first baseline;
-    background-color: #fff;
-    margin: 5em;
-    border-left: 10px solid rgb(175, 175, 175);
-    transition: 0.2s;
-}
-
-#sobre:hover {
-    padding-left: 25px;
-    padding-right: 25px;
-    transition: 0.4s;
-
-}
-
-#sobre h2 {
-    color: #000000;
-}
-
-#servicos {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    justify-content:first baseline;
-    background-color: #fff;
-    margin: 5em;
-    border-left: 10px solid rgb(175, 175, 175);
-    transition: 0.2s;
-}
-
-#servicos:hover {
-    padding-left: 25px;
-    padding-right: 25px;
-    transition: 0.4s;
-
-}
-
-#servicos h2 {
-    color: #000000;
-}
-/* Estilos para as seções */
-section {
-    padding: 2em;
-
-}
-
-section h2 {
-    color: #fff;
-    margin-bottom: 1em;
-}
-
-#contato {
-    text-align: left;
-    margin: 5px;
-    margin-bottom: 0;
-}
-
-/* Estilos para o rodapé */
-footer {
-    position:initial;
-    left: 0;
-    bottom: 0;
+    display: flex;
     width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    justify-content: space-between;
-    padding: 1.5em;
-    margin-bottom: 0;
+    justify-content: center;
+    height: 15vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 90%, rgba(0,0,0,0) 100%);
 }
 
-footer #contato {
-    position: sticky;
-    left: 2px;
-    bottom: 2px;
+header a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 100;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
 }
+
+header a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0%);
+}
+
+header a:hover::before {
+    width: 100%;
+    left: 0;
+}   
+
+.navbutton {
+    height: fit-content;
+    margin: 2% auto;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+}
+
+#headtitle {
+    width: auto;
+    text-align: center;
+    align-items: center;
+}
+
+#headtitle h1{
+    width: 100%;
+}
+
+#headtitle h1 p {
+    margin: auto;
+    width: fit-content;
+}
+
+#headtitle h1, h2{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat';
+}
+
+/* MAIN CONTENT */
+
+main{
+    padding: 70px 0 70px 0;
+    width: 100%;
+    font-family: 'Mulish';
+}
+
+article{
+    margin: 0 3%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 2%;
+    height: 2000px;
+}
+
+article h3{
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+
+/* FOOTER */
+
