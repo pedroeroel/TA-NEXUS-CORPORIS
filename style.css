@@ -10,7 +10,7 @@
 
 /* VÍDEO DE FUNDO E FUNDO COM GRADIENTE */
 #vid {
-    position: fixed;
+    position: relative;
     right: 0;
     bottom: 0;
     min-width: 100%; 
