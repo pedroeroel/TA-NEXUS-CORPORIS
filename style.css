@@ -10,7 +10,7 @@
 
 /* VÍDEO DE FUNDO E FUNDO COM GRADIENTE */
 #vid {
-    position: relative;
+    position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
@@ -38,13 +38,15 @@ body {
 main {
     position: fixed;
     overflow-y: scroll;
-    margin: 130px 0;
+    height: 100%;
+    margin: 8% 0;
     transition: scrollbar-color 2s;
-    -webkit-mask-image: linear-gradient(180deg, transparent, 2% red, 98% red, transparent);
-    mask-image: linear-gradient(180deg, transparent, 2% red, 98% red, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 4%, black 98%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 4%, black 98%, transparent);
 }
 
 main::-webkit-scrollbar{
+    margin-top: 3%  ;
     background-color: transparent;
     position: fixed;
     transition: 2.5s;
@@ -103,7 +105,7 @@ header {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 90%, rgba(0,0,0,0) 100%);
 }
 
-header a{
+header .navbutton{
     text-decoration: none;
     color: white;
     font-family: 'Mulish';
@@ -113,7 +115,7 @@ header a{
     overflow: hidden;
 }
 
-header a::before {
+header .navbutton::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -125,7 +127,7 @@ header a::before {
     transform: translateX(0%);
 }
 
-header a:hover::before {
+header .navbutton:hover::before {
     width: 100%;
     left: 0;
 }   
@@ -161,7 +163,7 @@ header a:hover::before {
 /* MAIN CONTENT */
 
 main{
-    padding: 70px 0 70px 0;
+    padding: 40px 0 70px 0;
     width: 100%;
     font-family: 'Mulish';
 }
@@ -172,7 +174,6 @@ article{
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 2%;
-    height: 2000px;
 }
 
 article h3{
@@ -180,5 +181,32 @@ article h3{
     margin: 0 0 1% 0;
 }
 
-/* FOOTER */
+.navbutton{
+    text-decoration: none;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 100;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
 
+}
+
+.navbutton::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0%);
+}
+
+.navbutton:hover::before {
+    width: 100%;
+    left: 0;
+}   
+
+/* FOOTER */
