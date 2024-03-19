@@ -38,9 +38,10 @@ body {
 main {
     position: fixed;
     overflow-y: scroll;
-    height: 100%;
-    margin: 90px 0;
+    margin: 130px 0;
     transition: scrollbar-color 2s;
+    -webkit-mask-image: linear-gradient(180deg, transparent, 2% red, 98% red, transparent);
+    mask-image: linear-gradient(180deg, transparent, 2% red, 98% red, transparent);
 }
 
 main::-webkit-scrollbar{
