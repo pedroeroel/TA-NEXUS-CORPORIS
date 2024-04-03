@@ -30,8 +30,7 @@
 
 /* BODY CONFIGS */
 
-body {
-}
+
 
 /* SCROLLBAR */
 
@@ -46,7 +45,7 @@ main {
 }
 
 main::-webkit-scrollbar{
-    margin-top: 3%  ;
+    margin: 0;
     background-color: transparent;
     position: fixed;
     transition: 2.5s;
@@ -66,6 +65,19 @@ main::-webkit-scrollbar-thumb:hover {
 main::-webkit-scrollbar-track {
     background: transparent;
     padding: 5px;
+}
+
+#frase {
+    width: 100%;
+    margin: 2% 0;
+}
+
+#pizza {
+    width: 100%;
+}
+
+#pizza p, ol{
+    margin: 1% 0;
 }
 
 /* DIVISÕES SURGINDO A PARTIR DO MEIO */
@@ -139,6 +151,8 @@ header .navbutton:hover::before {
     border-bottom: 1px solid transparent;
 }
 
+#top-button {}
+
 #headtitle {
     width: auto;
     text-align: center;
@@ -163,9 +177,62 @@ header .navbutton:hover::before {
 /* MAIN CONTENT */
 
 main{
-    padding: 40px 0 70px 0;
+    padding-top: 40px;
     width: 100%;
     font-family: 'Mulish';
+    height: 85%;
+    bottom: -20%;
+}
+
+section {
+    margin: 5vh;
+
+}
+
+#arttab h4{
+    margin: 5vh 0vh;
+}
+
+#arttab {
+    justify-content: center;
+    text-align: center;
+}
+
+#tab1 {
+    border-radius: 20vh 0 0 20vh;
+    padding: 6vh 15vh;
+    width: 50%;
+}
+
+#tab1 tr{
+}
+
+#tab1 tr th{
+    font-size: 3vh;
+}
+
+#tab1 tr td{
+    text-align: justify;
+    width: 50%;
+}
+
+#tab2 {
+    border-radius: 0 20vh 20vh 0;
+    padding: 6vh 15vh;
+    width: 50%;
+}
+
+#tab2 tr th{
+    font-size: 3vh;
+}
+
+#tab2 tr td{
+    text-align: justify;
+    width: 50%;
+}
+
+#tab1 h6{
+    margin: 0 5vh;
 }
 
 article{
@@ -176,20 +243,35 @@ article{
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
+
+}
+
+article table {
+    width: 60%;
+    padding: 0;
+    border-radius: 1%;
+    border: 2px solid white;
 }
 
 article h4{
     width: 100%;
     margin: 0 0 1vh 0;
+    text-align: center;
 }
 
 article p{
     width: 100%;
 }
 
+#redacao p {
+    text-align: justify;
+    margin: 1% 7.5%;
+}
+
 article h3{
     width: 100%;
     margin: 0 auto 1% 0;
+    text-align: center;
 }
 
 main .navbutton{
@@ -224,4 +306,79 @@ main .navbutton h3:hover::before {
     left: 0;
 }   
 
+img{
+    margin: 5% auto;
+    border-radius:  5%;
+    box-shadow: 0 0 1vh white;
+}
+
+#img1{
+    width:  60%;
+}
+
+#img2{
+    width: 10%;
+}
+
+#img3{
+    width: 50%;
+}
+
+#img4{
+    
+}
+
 /* FOOTER */
+
+footer {
+    width: 100%;
+    background: linear-gradient(360deg,rgba(0, 0, 0, 0.5) 90%, rgba(0,0,0,0) 100%);
+    height: 20vh;
+    position: relative;
+    padding: 5vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#footer p{
+    margin-left: 2vh;
+    margin-right: auto;
+}
+
+#footer .navbutton{
+    width: fit-content;
+    margin: 10px 10px ;
+}
+
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+
+#footer .navbutton{
+    text-decoration: none;
+    color: white;
+    font-family: 'Mulish';
+    font-weight: 100;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#footer .navbutton::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0%);
+}
+
+#footer .navbutton:hover::before {
+    width: 100%;
+    left: 0;
+}   
