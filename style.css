@@ -98,12 +98,12 @@ main::-webkit-scrollbar-track {
 
 @keyframes surgirdomeio {
     0% {
-        width: 0;
-        margin: 0 auto;
+        width: 0%;
+        margin: 0 auto 0 0;
     }
     100% {
         width: 100%;
-        margin: 0 auto;
+        margin: 0 0 0 0;
     }
 }
 
@@ -156,11 +156,12 @@ header .navbutton:hover::before {
 #headtitle {
     width: auto;
     text-align: center;
+    display: flex;
     align-items: center;
 }
 
 #headtitle h1{
-    width: 100%;
+    height: 50%;
 }
 
 #headtitle h1 p {
@@ -168,7 +169,13 @@ header .navbutton:hover::before {
     width: fit-content;
 }
 
+#headtitle img{
+    box-shadow: none;
+    height: 100%;
+}
+
 #headtitle h1, h2{
+    width: max-content;
     text-align: center;
     font-weight: 100;
     font-family: 'Montserrat';
