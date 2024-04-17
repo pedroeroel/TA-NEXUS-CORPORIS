@@ -247,10 +247,15 @@ article{
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 2%;
+    padding: 10%;
     display: flex;
     flex-wrap: wrap;
 
+}
+
+article iframe {
+    border-radius: 20px;
+    height: 80vh;
 }
 
 article table {
@@ -272,7 +277,6 @@ article p{
 
 #redacao p {
     text-align: justify;
-    margin: 1% 7.5%;
 }
 
 article h3{
